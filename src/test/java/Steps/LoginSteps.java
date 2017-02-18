@@ -1,6 +1,7 @@
 package Steps;
 
 import Pageobject.HomePage;
+import Pageobject.ProfilePage;
 import Pageobject.SignInPage;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -52,7 +53,31 @@ public class LoginSteps  extends DriverFactory{
 		new HomePage(driver).she_should_be_login_to_the_application();
 	}
 
+	
+	//profile page 
+	
+	@Given("^user is logged in$")
+	public void user_is_logged_in() throws Throwable {
+	 Thread.sleep(2000);
+	 new ProfilePage(driver).user_is_logged_in();
+	 
+	}
 
+
+			@When("^user clicks user profile link$")
+			public void user_clicks_user_profile_link() throws Throwable {
+				Thread.sleep(3000);
+				new ProfilePage(driver).user_clicks_user_profile_link();
+			}
+
+			@Then("^user is navigated to user profile page$")
+			public void user_is_navigated_to_user_profile_page() throws Throwable {
+			    Thread.sleep(3000);
+			    new ProfilePage(driver).user_is_navigated_to_user_profile_page();
+			    
+			}
+
+	
 
 	
 }
