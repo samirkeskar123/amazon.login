@@ -16,7 +16,7 @@ Then she should be login to the application
 
 Examples:
 | email | password |
-| samir_keskar@hotmail.com | decision |
+| testing564966@mailinator.com | testing564966 |
 
 
 

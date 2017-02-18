@@ -39,14 +39,14 @@ public void she_is_navigated_to_sign_in_page() throws Throwable {
 }
 
 
-@Then("^she provides her email as samir keskar hotmail com$")
-public void she_provides_her_email_as_samir_keskar_hotmail_com(String email) throws Throwable {
+@Then("^she provides her email $")
+public void she_provides_her_email(String email) throws Throwable {
     SignIn.sendKeys(email);
 	
 }
 
-@Then("^she provides her password as decision$")
-public void she_provides_her_password_as_decision(String password) throws Throwable {
+@Then("^she provides her $")
+public void she_provides_her_password(String password) throws Throwable {
    Password.sendKeys(password);
 }
 

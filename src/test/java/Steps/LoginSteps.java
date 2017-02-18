@@ -34,12 +34,12 @@ public class LoginSteps  extends DriverFactory{
 
 	@Then("^she provides her email as ([^\"]*)$")
 	public void she_provides_her_email_as_samir_keskar_hotmail_com(String email) throws Throwable {
-	    new SignInPage(driver).she_provides_her_email_as_samir_keskar_hotmail_com(email);
+	    new SignInPage(driver).she_provides_her_email(email);
 	}
 	
 	@Then("^she provides her password as ([^\"]*)$")
 	public void she_provides_her_password_as_decision(String password) throws Throwable {
-	    new SignInPage(driver).she_provides_her_password_as_decision(password);
+	    new SignInPage(driver).she_provides_her_password(password);
 	}
 
 	@Then("^she clicks Sign in button$")

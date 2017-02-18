@@ -18,10 +18,10 @@ public class ProfilePage {
 	@FindBy(className = "welcome-msg")
 	private WebElement yourprofile;
 	
-	@FindBy(linkText = "Hi, samir")
+	@FindBy(linkText = "Hi, testing564966")
 	private WebElement login;
 	
-	@FindBy(className= "welcome-msg")
+	@FindBy(className= "np-grid-title")
 	private WebElement welcomemsg;
 	
 	@FindBy(id = "nav-your-amazon")
@@ -37,8 +37,9 @@ public class ProfilePage {
 	
 	@Given("^user is logged in$")
 	public void user_is_logged_in() throws Throwable {
+	 Thread.sleep(3000);
 	  String namelogin= login.getText(); 
-     System.out.println(namelogin);
+      System.out.println(namelogin);
 	
 	}
 
@@ -51,8 +52,6 @@ public class ProfilePage {
 
 	@Then("^user is navigated to user profile page$")
 	public void user_is_navigated_to_user_profile_page() throws Throwable {
-		Thread.sleep(3000);
-		yourprofile.click();
 		Thread.sleep(3000);
 		String welcomename = welcomemsg.getText();
 		System.out.println(welcomename);
